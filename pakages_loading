@@ -1,4 +1,12 @@
-# Define the packages you need
+---
+title: "Automatically Install and Load R Packages"
+author: "Fabiola Blengio"
+date: "2024-11-29"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+# List of required packages
 packages <- c("dplyr", "Seurat", "patchwork")
 
 # Function to check and install missing packages
@@ -8,8 +16,6 @@ install_if_missing <- function(pkg) {
   }
 }
 
-# Apply the function to all packages
+# Install and load all packages
 lapply(packages, install_if_missing)
-
-# Load the libraries
 lapply(packages, library, character.only = TRUE)
