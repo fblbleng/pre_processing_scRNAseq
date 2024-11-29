@@ -1,3 +1,5 @@
+# Content of the R Markdown
+rmd_content <- '
 ---
 title: "Automatically Install and Load R Packages"
 author: "Fabiola Blengio"
@@ -32,4 +34,5 @@ colnames(example_matrix) <- paste0("Cell", 1:10)
 example_seurat <- CreateSeuratObject(counts = example_matrix)
 
 example_seurat
-
+'
+file_name <- "automated_package_install.Rmd" writeLines(rmd_content, file_name)
