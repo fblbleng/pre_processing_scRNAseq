@@ -1,10 +1,9 @@
-# Content of the R Markdown
-rmd_content <- '
+
 ---
 title: "Automatically Install and Load R Packages"
 author: "Fabiola Blengio"
 date: "2024-11-29"
-output: html_document
+output: rmarkdown::html_vignette
 ---
 
 ```{r setup, include=FALSE}
@@ -36,3 +35,12 @@ example_seurat <- CreateSeuratObject(counts = example_matrix)
 example_seurat
 '
 file_name <- "automated_package_install.Rmd" writeLines(rmd_content, file_name)
+<details> <summary> Session Info </summary>
+```{r eval=FALSE}
+SessionInfo()
+```
+
+```
+Put it here 
+```
+</details>
