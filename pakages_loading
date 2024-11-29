@@ -19,3 +19,17 @@ install_if_missing <- function(pkg) {
 # Install and load all packages
 lapply(packages, install_if_missing)
 lapply(packages, library, character.only = TRUE)
+# Example usage of loaded libraries
+library(dplyr)
+library(Seurat)
+library(patchwork)
+
+# Example code for your analysis
+# Creating a small Seurat object for demonstration
+example_matrix <- matrix(rnorm(100), nrow = 10, ncol = 10)
+rownames(example_matrix) <- paste0("Gene", 1:10)
+colnames(example_matrix) <- paste0("Cell", 1:10)
+example_seurat <- CreateSeuratObject(counts = example_matrix)
+
+example_seurat
+
